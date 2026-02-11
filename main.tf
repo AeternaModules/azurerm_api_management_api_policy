@@ -1,5 +1,5 @@
-resource "azurerm_api_management_api_policy" "api_management_api_policys" {
-  for_each = var.api_management_api_policys
+resource "azurerm_api_management_api_policy" "api_management_api_policies" {
+  for_each = var.api_management_api_policies
 
   api_management_name = each.value.api_management_name
   api_name            = each.value.api_name
