@@ -1,3 +1,7 @@
+output "api_management_api_policies_id" {
+  description = "Map of id values across all api_management_api_policies, keyed the same as var.api_management_api_policies"
+  value       = { for k, v in azurerm_api_management_api_policy.api_management_api_policies : k => v.id }
+}
 output "api_management_api_policies_api_management_name" {
   description = "Map of api_management_name values across all api_management_api_policies, keyed the same as var.api_management_api_policies"
   value       = { for k, v in azurerm_api_management_api_policy.api_management_api_policies : k => v.api_management_name }
